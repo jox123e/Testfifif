@@ -1,1 +1,11 @@
-print("niu")
+	local TeleportService = game:GetService("TeleportService")
+ local Players = game:GetService("Players")
+local PlaceId = game.PlaceId 
+local JobId = game.JobId
+if #Players:GetPlayers() <= 1 then
+		Players.LocalPlayer:Kick("\nRejoining...")
+		Wait()
+		TeleportService:Teleport(PlaceId, Players.Jaxnaxeex)
+	else
+		TeleportService:TeleportToPlaceInstance(PlaceId, JobId, Players.Jaxnaxeex)
+	end 
