@@ -3,7 +3,7 @@
 local PlaceId = game.PlaceId 
 local JobId = game.JobId
 if #Players:GetPlayers() <= 1 then
-		Players.LocalPlayer:Kick("\nRejoining...")
+		Players.Jaxnaxeex:Kick("\nRejoining...")
 		Wait()
 		TeleportService:Teleport(PlaceId, Players.Jaxnaxeex)
 	else
