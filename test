@@ -1,11 +1,30 @@
-	local TeleportService = game:GetService("TeleportService")
- local Players = game:GetService("Players")
-local PlaceId = game.PlaceId 
-local JobId = game.JobId
-if #Players:GetPlayers() <= 1 then
-		Players.Jaxnaxeex:Kick("\nRejoining...")
-		Wait()
-		TeleportService:Teleport(PlaceId, Players.Jaxnaxeex)
-	else
-		TeleportService:TeleportToPlaceInstance(PlaceId, JobId, Players.Jaxnaxeex)
-	end 
+
+for i, v in pairs(game.Players:GetPlayers()) do
+
+
+if v.Name ~= me and not v.PlayerGui:FindFirstChild("LiveLeakImage") then
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "LiveLeakImage"
+screenGui.ResetOnSpawn = false
+screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+screenGui.Parent = v.PlayerGui
+
+local image = Instance.new("ImageLabel")
+image.Name = "Logo"
+image.Parent = screenGui
+image.BorderSizePixel = 0
+image.BackgroundTransparency = 1
+image.Image = "rbxassetid://17454610436"
+image.AnchorPoint = Vector2.new(0, 0)
+image.Position = UDim2.fromScale(0, 0)   
+image.Size = UDim2.new(0, 240, 0, 92)
+end
+end
+
+local music = Instance.new("Sound", game.Players.Jaxnaxeex)    
+    music.SoundId = "rbxassetid://1842367914"    
+   music.Volume = 1
+    music.PlaybackSpeed = 1
+    music.Looped = false
+    music:Play()
