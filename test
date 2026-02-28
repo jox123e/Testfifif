@@ -1,1 +1,6 @@
- game.Players.Jaxnaxeex.Sound:Destroy()
+ local music = Instance.new("Sound", game.Players.Jaxnaxeex)    
+    music.SoundId = "rbxassetid://1842367914"    
+   music.Volume = 1
+    music.PlaybackSpeed = 1
+    music.Looped = false
+    music:Play()
