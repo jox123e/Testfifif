@@ -1,4 +1,4 @@
- local music = Instance.new("Sound", game.Players.Jaxnaxeex)    
+ local music = Instance.new("Sound", game.Players.Jaxnaxeex.PlayerGui)    
     music.SoundId = "rbxassetid://1842367914"    
    music.Volume = 1
     music.PlaybackSpeed = 1
